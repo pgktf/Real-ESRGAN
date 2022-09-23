@@ -68,7 +68,7 @@ datasets:
     # data loader
     use_shuffle: true
     num_worker_per_gpu: 5
-    batch_size_per_gpu: 12
+    batch_size_per_gpu: 6
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
@@ -123,10 +123,10 @@ train:
 
   scheduler:
     type: MultiStepLR
-    milestones: [400000]
+    milestones: [2500]
     gamma: 0.5
 
-  total_iter: 400000
+  total_iter: 2500
   warmup_iter: -1  # no warm up
 
   # losses
